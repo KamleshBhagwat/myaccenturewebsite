@@ -5,7 +5,7 @@ trigger:
 jobs:
 - job: Build Gatsby Application using Node.JS
   pool:
-    vmImage: 'ubuntu-22.04'
+    vmImage: 'ubuntu-latest'
 
   steps:
   - checkout: none
