@@ -3,7 +3,7 @@ trigger:
 - master
 
 jobs:
-- job: "Build"
+- job: 'Building Job using Node.JS'
   pool:
     vmImage: "ubuntu-latest"
 
