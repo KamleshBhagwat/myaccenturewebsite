@@ -8,7 +8,7 @@ jobs:
     vmImage: "ubuntu-latest"
 
   steps:
-  - checkout: none
+  # - checkout: none
 
   - task: NodeTool@0
     inputs:
@@ -26,6 +26,8 @@ jobs:
   - script: |
       gatsby --version
     displayName: 'Verify Gatsby Cli Version'
+
+    # It will look for Package.json in the current directory
 
   - script: |
       npm install
