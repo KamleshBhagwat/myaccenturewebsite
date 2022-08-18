@@ -3,12 +3,31 @@ trigger:
 - master
 
 jobs:
-
-- job: Windows
+- job: Build Gatsby Application using Node.JS
   pool:
-    vmImage: 'windows-latest'
+    vmImage: 'ubuntu-22.04'
+
   steps:
   - checkout: none
-  - script: echo hello from Windows
+
+  - task: NodeTool@0
+    inputs:
+      versionSpec: '18.2.0'
+    displayName: 'Install Node.js'
+
+  - script: |
+      node --version
+    displayName: 'Verify Node.js installation'
+
+  - script: |
+      npm install -g gatsby-cli
+    displayName: 'Install Gatsby CLI'
+
+  - script: |
+      gatsby --version
+    displayName: 'Verify Gatsby Cli Version'
+
+
+
 
 
