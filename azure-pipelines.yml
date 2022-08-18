@@ -8,6 +8,7 @@ jobs:
   pool:
     vmImage: 'windows-latest'
   steps:
+  - checkout: none
   - script: echo hello from Windows
 
 
