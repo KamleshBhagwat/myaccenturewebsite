@@ -27,6 +27,14 @@ jobs:
       gatsby --version
     displayName: 'Verify Gatsby Cli Version'
 
+  - script: |
+      npm install
+    displayName: 'Install the Application Dependencies'
+
+  - script: |
+      gatsby build
+    displayName: 'Build the Application'
+
 
 
 
